@@ -2231,7 +2231,11 @@ button {
   border: none;
   background: #050403;
 }
-
+/* =========================================================
+   SUNRISE MOBILE FINAL V2
+   Fix: hero full màn hình, menu không kéo ngang, sound không bị che
+   Dán xuống CUỐI CÙNG App.css
+========================================================= */
 
 @media (max-width: 768px) {
   html,
@@ -2300,7 +2304,7 @@ button {
     object-fit: contain;
   }
 
-  
+  /* TOP MAIN MENU: hiển thị đủ, xuống dòng, không kéo ngang */
 
   .main-nav {
     width: calc(100% - 18px);
@@ -2431,7 +2435,7 @@ button {
     display: none;
   }
 
-
+  /* Sound button: đưa lên cao, không bị Discord che */
 
   .sound-btn {
     right: 16px;
@@ -2444,7 +2448,7 @@ button {
     z-index: 12;
   }
 
-
+  /* NEWS MENU: xuống dòng, không kéo ngang */
 
   .news-tabs {
     width: 100%;
@@ -2542,7 +2546,7 @@ button {
   }
 }
 
-
+/* Nhỏ hơn nữa như máy 360px */
 
 @media (max-width: 420px) {
   .main-nav {
@@ -2580,5 +2584,70 @@ button {
 
   .sound-btn {
     bottom: calc(174px + env(safe-area-inset-bottom));
+  }
+}
+/* FIX HOME MOBILE NAV */
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 14px 14px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 82px;
+    margin: 0 auto;
+  }
+
+  .main-nav {
+    width: min(92vw, 420px);
+    height: auto;
+    min-height: 56px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    padding: 10px;
+    overflow: visible;
+
+    border-radius: 22px;
+  }
+
+  .main-nav a,
+  .main-nav button {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    line-height: 1.1;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .main-nav button {
+    grid-column: 1 / -1;
+  }
+
+  .socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 2px;
+  }
+
+  .socials a {
+    width: 38px;
+    height: 38px;
   }
 }
