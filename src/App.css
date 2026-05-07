@@ -866,9 +866,7 @@ button {
     grid-template-columns: 120px 1fr;
   }
 
-  .socials {
-    display: none;
-  }
+  
 
   .main-buttons {
     width: calc(100% - 48px);
@@ -1972,5 +1970,147 @@ button {
   .footer-center h2 {
     font-size: 28px;
     letter-spacing: 4px;
+  }
+}
+/* MOBILE HERO FINAL FIX */
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100svh;
+    min-height: 720px;
+    padding: 0;
+  }
+
+  .bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1);
+  }
+
+  .overlay {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.55)),
+      radial-gradient(circle at center, rgba(255,190,65,0.12), transparent 45%);
+  }
+
+  .topbar {
+    position: relative;
+    z-index: 10;
+    padding: 18px 14px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .logo {
+    width: 95px;
+    margin: 0 auto;
+  }
+
+  .main-nav {
+    width: 100%;
+    max-width: 94vw;
+    height: 54px;
+    padding: 6px;
+    gap: 6px;
+    border-radius: 18px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(14px);
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a,
+  .main-nav button {
+    height: 40px;
+    padding: 0 14px;
+    font-size: 10px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .main-buttons {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+    transform: translateX(-50%);
+    width: calc(100% - 28px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .main-btn,
+  .main-btn.launcher,
+  .main-btn.discord,
+  .main-btn.streamer {
+    width: 100%;
+    min-width: 0;
+    height: 58px;
+    padding: 0 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .main-btn.discord {
+    padding: 0 10px;
+    justify-content: center;
+  }
+
+  .discord-icon-box {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .main-btn.streamer {
+    grid-column: 1 / -1;
+    height: 54px;
+    font-size: 12px;
+  }
+
+  .scroll-text {
+    display: none;
+  }
+
+  .sound-btn {
+    right: 16px;
+    bottom: 108px;
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .topbar {
+    gap: 10px;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .socials a {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
   }
 }
