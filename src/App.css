@@ -1750,3 +1750,227 @@ button {
   padding: 80px 60px 65px;
   border-top: none !important;
 }
+.youtube-card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  pointer-events: none;
+}
+
+.youtube-modal {
+  width: 100%;
+  height: min(590px, 70vh);
+  border: none;
+  display: block;
+  background: #000;
+}
+.youtube-modal {
+  width: 100%;
+  height: min(590px, 70vh);
+  border: none;
+  display: block;
+  background: #000;
+}
+.youtube-card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+}
+.reward-media-item img,
+.reward-media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #050403;
+}
+/* MOBILE FIX */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  .bg-video,
+  .news-bg-video,
+  .hot-bg-video,
+  .bottom-bg-video,
+  .ranking-bg-video {
+    object-fit: cover;
+  }
+
+  .topbar {
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .main-nav {
+    width: 100%;
+    max-width: 92vw;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 20px;
+
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a,
+  .main-nav button {
+    min-width: max-content;
+    height: 44px;
+    padding: 0 18px;
+    font-size: 12px;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .main-buttons {
+    width: calc(100% - 36px);
+    left: 18px;
+    right: 18px;
+    bottom: 64px;
+    transform: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .main-btn,
+  .main-btn.launcher,
+  .main-btn.discord,
+  .main-btn.streamer {
+    width: 100%;
+    min-width: 0;
+    height: 58px;
+    padding: 0 18px;
+
+    font-size: 15px;
+    border-radius: 14px;
+    justify-content: center;
+  }
+
+  .main-btn.discord {
+    padding-left: 8px;
+    justify-content: flex-start;
+  }
+
+  .discord-icon-box {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    flex-shrink: 0;
+  }
+
+  .scroll-text {
+    display: none;
+  }
+
+  .sound-btn {
+    right: 18px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .news-section,
+  .hot-section {
+    padding: 60px 16px 80px;
+  }
+
+  .news-inner h2,
+  .hot-title h2 {
+    font-size: 34px;
+  }
+
+  .news-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+
+  .news-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .news-tabs button {
+    min-width: max-content;
+    padding: 0 20px;
+    height: 44px;
+    font-size: 12px;
+  }
+
+  .news-grid,
+  .hot-grid,
+  .reward-grid,
+  .ranking-type-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .news-media {
+    height: 220px;
+  }
+
+  .hot-media {
+    height: 230px;
+  }
+
+  .news-content,
+  .hot-content {
+    padding: 22px 18px;
+    text-align: center;
+  }
+
+  .partner-section,
+  .about-footer-section,
+  .ranking-page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .partner-box {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 26px 20px;
+  }
+
+  .partner-cta {
+    width: 100%;
+  }
+
+  .about-top {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    text-align: center;
+  }
+
+  .about-brand {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-center h2 {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+}
