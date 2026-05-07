@@ -2211,3 +2211,599 @@ button {
     gap: 22px;
   }
 }
+/* FIX HOT CARD MEDIA NOT CROPPING */
+
+.hot-media img,
+.hot-media video,
+.hot-media iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #050403;
+}
+
+.hot-media {
+  background: #050403;
+}
+.hot-media .youtube-card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #050403;
+}
+/* =========================================================
+   SUNRISE ROLEPLAY - PERFECT MOBILE UI/UX FIX
+   Dán xuống CUỐI CÙNG của App.css
+========================================================= */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    background: #050403;
+  }
+
+  /* HERO */
+
+  .hero {
+    height: 100svh;
+    min-height: 720px;
+    max-height: 920px;
+    overflow: hidden;
+    background: #050403;
+  }
+
+  .bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    background: #050403;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(0, 0, 0, 0.14) 34%,
+        rgba(0, 0, 0, 0.62) 100%
+      ),
+      radial-gradient(
+        circle at center,
+        rgba(255, 190, 65, 0.1),
+        transparent 58%
+      );
+  }
+
+  /* HEADER */
+
+  .topbar {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    padding: 14px 14px 0;
+
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    grid-template-areas:
+      "logo nav"
+      "social social";
+
+    align-items: center;
+    gap: 10px 12px;
+  }
+
+  .logo {
+    grid-area: logo;
+
+    width: 70px;
+    height: auto;
+    margin: 0;
+
+    object-fit: contain;
+  }
+
+  .main-nav {
+    grid-area: nav;
+
+    width: 100%;
+    max-width: none;
+    height: 48px;
+
+    padding: 6px;
+    gap: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.42);
+    border: 1px solid rgba(255, 210, 110, 0.18);
+    backdrop-filter: blur(14px);
+
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a,
+  .main-nav button {
+    flex: 0 0 auto;
+
+    height: 36px;
+    padding: 0 13px;
+
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
+
+    border-radius: 999px;
+  }
+
+  /* SOCIAL ICONS */
+
+  .socials {
+    grid-area: social;
+
+    width: 100%;
+    margin: 2px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .socials a {
+    width: 38px;
+    height: 38px;
+
+    font-size: 14px;
+    flex-shrink: 0;
+
+    background:
+      radial-gradient(circle, rgba(255, 215, 120, 0.24), rgba(255, 177, 40, 0.07));
+    border: 1px solid rgba(255, 220, 130, 0.58);
+  }
+
+  /* MAIN BUTTONS */
+
+  .main-buttons {
+    position: absolute;
+    z-index: 8;
+
+    left: 14px;
+    right: 14px;
+    bottom: calc(22px + env(safe-area-inset-bottom));
+
+    width: auto;
+    transform: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .main-btn,
+  .main-btn.launcher,
+  .main-btn.discord,
+  .main-btn.streamer {
+    width: 100%;
+    min-width: 0;
+    height: 58px;
+
+    padding: 0 12px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+    line-height: 1.15;
+    letter-spacing: 0.2px;
+    text-align: center;
+    white-space: nowrap;
+
+    justify-content: center;
+  }
+
+  .main-btn.discord {
+    padding: 0 10px;
+    justify-content: center;
+  }
+
+  .discord-icon-box {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+    font-size: 22px;
+
+    flex-shrink: 0;
+  }
+
+  .main-btn.streamer {
+    grid-column: 1 / -1;
+    height: 54px;
+    font-size: 12px;
+  }
+
+  .scroll-text {
+    display: none;
+  }
+
+  .sound-btn {
+    right: 16px;
+    bottom: calc(104px + env(safe-area-inset-bottom));
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 17px;
+  }
+
+  /* SECTIONS */
+
+  .news-section,
+  .hot-section {
+    padding: 58px 16px 78px;
+  }
+
+  .news-inner h2,
+  .hot-title h2 {
+    font-size: 34px;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .hot-title {
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .hot-title span {
+    display: none;
+  }
+
+  /* TABS */
+
+  .news-tabs,
+  .reward-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    padding: 0 2px 10px;
+    margin-top: 28px;
+
+    scrollbar-width: none;
+  }
+
+  .news-tabs::-webkit-scrollbar,
+  .reward-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .news-tabs button,
+  .reward-tabs button {
+    min-width: max-content;
+    height: 44px;
+
+    padding: 0 18px;
+
+    font-size: 12px;
+    border-radius: 999px;
+  }
+
+  /* CARD GRID */
+
+  .news-grid,
+  .hot-grid,
+  .ranking-type-grid,
+  .reward-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .news-card,
+  .hot-card,
+  .ranking-type-card,
+  .reward-card {
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .news-media,
+  .hot-media {
+    height: 218px;
+    border-radius: 18px 18px 0 0;
+    background: #050403;
+  }
+
+  .news-media img,
+  .news-media video,
+  .news-media iframe,
+  .hot-media img,
+  .hot-media video,
+  .hot-media iframe,
+  .reward-media-item img,
+  .reward-media-item video,
+  .reward-media-item iframe {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    background: #050403;
+  }
+
+  .youtube-card {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #050403;
+  }
+
+  .news-content,
+  .hot-content {
+    padding: 22px 18px;
+    text-align: center;
+  }
+
+  .news-content h3,
+  .hot-content h3 {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+
+  .news-content p,
+  .hot-content p {
+    min-height: auto;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .play-circle {
+    width: 58px;
+    height: 58px;
+  }
+
+  /* PARTNER */
+
+  .partner-section {
+    padding: 64px 18px;
+  }
+
+  .partner-box {
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 28px 20px;
+    text-align: center;
+
+    border-radius: 22px;
+  }
+
+  .partner-box h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .partner-box p:last-child {
+    font-size: 14px;
+  }
+
+  .partner-cta {
+    width: 100%;
+    height: 54px;
+  }
+
+  /* ABOUT / FOOTER */
+
+  .about-footer-section {
+    padding: 64px 18px 56px;
+  }
+
+  .about-top {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    text-align: center;
+  }
+
+  .about-brand {
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .about-brand img {
+    width: 74px;
+  }
+
+  .about-brand h2 {
+    font-size: 22px;
+  }
+
+  .about-content h3::after {
+    display: none;
+  }
+
+  .footer-center h2 {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  .footer-center p {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .footer-buttons {
+    flex-wrap: wrap;
+  }
+
+  /* RANKING PAGE */
+
+  .ranking-page {
+    padding: 24px 18px 70px;
+  }
+
+  .ranking-page h1 {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  .ranking-hero {
+    margin: 42px auto 34px;
+  }
+
+  .ranking-desc {
+    font-size: 14px;
+  }
+
+  .reward-section {
+    margin-top: 60px;
+  }
+
+  .reward-section h2 {
+    font-size: 32px;
+  }
+
+  .reward-card {
+    min-height: auto;
+    padding: 24px 18px;
+    text-align: center;
+  }
+
+  .reward-media-slider {
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+
+  .reward-media-item {
+    min-width: 172px;
+    height: 108px;
+  }
+
+  .reward-card ul {
+    padding-left: 0;
+  }
+
+  .reward-card li {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  /* MODALS */
+
+  .news-modal,
+  .reward-modal,
+  .ranking-popup {
+    padding: 14px;
+  }
+
+  .news-modal-box,
+  .reward-modal-box,
+  .ranking-popup-box {
+    width: 96vw;
+    max-height: 88svh;
+    border-radius: 16px;
+  }
+
+  .news-modal-box video,
+  .news-modal-box img,
+  .reward-modal-box video,
+  .reward-modal-box img,
+  .ranking-popup-box video,
+  .ranking-popup-box img {
+    max-height: 62svh;
+    object-fit: contain;
+  }
+
+  .youtube-modal {
+    height: 58svh;
+  }
+
+  .news-modal-box h3,
+  .ranking-popup-box h3 {
+    padding: 18px 18px 0;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .news-modal-box p,
+  .ranking-popup-box p {
+    padding: 10px 18px 22px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .topbar {
+    grid-template-columns: 70px 1fr;
+    padding: 14px 10px 0;
+    gap: 9px;
+  }
+
+  .logo {
+    width: 64px;
+  }
+
+  .main-nav {
+    height: 46px;
+  }
+
+  .main-nav a,
+  .main-nav button {
+    height: 34px;
+    padding: 0 11px;
+    font-size: 9px;
+  }
+
+  .socials a {
+    width: 35px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .main-buttons {
+    left: 12px;
+    right: 12px;
+    gap: 10px;
+  }
+
+  .main-btn,
+  .main-btn.launcher,
+  .main-btn.discord,
+  .main-btn.streamer {
+    height: 56px;
+    font-size: 12px;
+  }
+
+  .discord-icon-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .news-media,
+  .hot-media {
+    height: 205px;
+  }
+}
