@@ -2717,3 +2717,45 @@ button {
     height: 40px;
   }
 }
+/* FIX MOBILE HOME NAV SPACING */
+
+@media (max-width: 768px) {
+  .main-nav {
+    width: calc(100% - 28px);
+    height: 52px;
+
+    display: grid;
+    grid-template-columns: 0.85fr 0.75fr 1.65fr 0.95fr;
+    align-items: center;
+
+    gap: 3px;
+    padding: 6px 10px;
+
+    overflow: hidden;
+    border-radius: 999px;
+  }
+
+  .main-nav a,
+  .main-nav button {
+    width: 100%;
+    min-width: 0;
+    height: 38px;
+
+    padding: 0 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8.2px;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+  }
+
+  .main-nav button svg {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+  }
+}
