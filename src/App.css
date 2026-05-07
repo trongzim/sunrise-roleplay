@@ -2717,45 +2717,60 @@ button {
     height: 40px;
   }
 }
-/* FIX MOBILE HOME NAV SPACING */
+/* MOBILE NAV FINAL COMPACT */
 
 @media (max-width: 768px) {
   .main-nav {
     width: calc(100% - 28px);
     height: 52px;
-
-    display: grid;
-    grid-template-columns: 0.85fr 0.75fr 1.65fr 0.95fr;
+    display: flex;
     align-items: center;
-
-    gap: 3px;
-    padding: 6px 10px;
-
+    justify-content: space-between;
+    gap: 4px;
+    padding: 6px 8px;
     overflow: hidden;
     border-radius: 999px;
   }
 
   .main-nav a,
   .main-nav button {
-    width: 100%;
+    flex: 1 1 0;
     min-width: 0;
     height: 38px;
-
-    padding: 0 2px;
-
+    padding: 0 3px;
+    font-size: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
-    font-size: 8.2px;
+  .main-nav a:nth-child(1)::after {
+    content: "Trang chủ";
+  }
+
+  .main-nav a:nth-child(2)::after {
+    content: "Tin tức";
+  }
+
+  .main-nav button::after {
+    content: "Xếp hạng";
+  }
+
+  .main-nav a:nth-child(4)::after {
+    content: "Cơ chế";
+  }
+
+  .main-nav a::after,
+  .main-nav button::after {
+    font-size: 9.5px;
     font-weight: 900;
-    letter-spacing: -0.2px;
     white-space: nowrap;
   }
 
   .main-nav button svg {
     width: 10px;
     height: 10px;
+    margin-right: 3px;
     flex-shrink: 0;
   }
 }
