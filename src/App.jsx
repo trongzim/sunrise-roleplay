@@ -43,6 +43,8 @@ const newsList = [
     title: "Ra mắt launcher Sunrise",
     desc: "Launcher mới giúp người chơi tải game, xem tin tức và cập nhật phiên bản dễ dàng hơn.",
   },
+  
+  
   {
     category: "Cập Nhật",
     youtubeId: "YgUNuS7hHTQ",

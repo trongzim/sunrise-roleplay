@@ -2114,3 +2114,100 @@ button {
     font-size: 13px;
   }
 }
+/* MOBILE HERO LOGO BACKGROUND + SOCIAL CENTER FIX */
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100svh;
+    min-height: 720px;
+    background: #050403;
+  }
+
+  .bg-video {
+    object-fit: contain;
+    object-position: center center;
+    background: #050403;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.5)),
+      radial-gradient(circle at center, rgba(255,190,65,0.12), transparent 55%);
+  }
+
+  .topbar {
+    padding: 18px 14px 0;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    grid-template-areas:
+      "logo nav"
+      "social social";
+    gap: 10px 12px;
+    align-items: center;
+  }
+
+  .logo {
+    grid-area: logo;
+    width: 78px;
+    margin: 0;
+  }
+
+  .main-nav {
+    grid-area: nav;
+    width: 100%;
+    max-width: none;
+    height: 48px;
+  }
+
+  .socials {
+    grid-area: social;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .socials a {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .main-buttons {
+    bottom: 34px;
+  }
+}
+/* AUTO RESPONSIVE CARD GRID */
+
+.news-grid,
+.hot-grid,
+.ranking-type-grid,
+.reward-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  width: min(1360px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
+}
+
+.news-card,
+.hot-card,
+.ranking-type-card,
+.reward-card {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .news-grid,
+  .hot-grid,
+  .ranking-type-grid,
+  .reward-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
