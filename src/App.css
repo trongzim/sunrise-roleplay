@@ -2232,7 +2232,7 @@ button {
   background: #050403;
 }
 /* =========================================================
-   SUNRISE MOBILE FINAL V2
+   RexCity MOBILE FINAL V2
    Fix: hero full màn hình, menu không kéo ngang, sound không bị che
    Dán xuống CUỐI CÙNG App.css
 ========================================================= */
@@ -2976,4 +2976,46 @@ button {
     background: rgba(255, 195, 70, 0.55);
     border-radius: 999px;
   }
+}
+/* RANKING BACKGROUND IMAGE FIX */
+
+.ranking-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-image: url("/logo3.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.ranking-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.62),
+      rgba(0, 0, 0, 0.9)
+    );
+}
+
+.ranking-page > *:not(.ranking-bg-overlay) {
+  position: relative;
+  z-index: 2;
+}
+.news-bg-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
 }

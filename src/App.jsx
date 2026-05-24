@@ -40,7 +40,7 @@ const newsList = [
     category: "Cập Nhật",
     src: "/chichech.mp4",
     date: "07/05/2026",
-    title: "Ra mắt launcher Sunrise",
+    title: "Ra mắt launcher RexCity",
     desc: "Launcher mới giúp người chơi tải game, xem tin tức và cập nhật phiên bản dễ dàng hơn.",
   },
   
@@ -130,13 +130,13 @@ const newsList = [
     src: "/chichech.mp4",
     date: "07/05/2026",
     title: "Đua xe thành phố",
-    desc: "Giải đua xe với phần thưởng giới hạn dành cho cộng đồng Sunrise RP.",
+    desc: "Giải đua xe với phần thưởng giới hạn dành cho cộng đồng RexCity RP.",
   },
   {
     category: "Cộng Đồng",
     youtubeId: "SxpLRYTH7UA",
     date: "07/05/2026",
-    title: "Sinh nhật Sunrise RP",
+    title: "Sinh nhật RexCity RP",
     desc: "Cộng đồng cùng tham gia ngày hội đặc biệt và lưu lại khoảnh khắc đáng nhớ.",
   },
   {
@@ -163,7 +163,7 @@ const hotList = [
   {
     src: "/chichech.mp4",
     title: "Nghề nghiệp thành phố",
-    desc: "Hệ thống nghề nghiệp đa dạng giúp người chơi xây dựng cuộc sống riêng trong Sunrise City.",
+    desc: "Hệ thống nghề nghiệp đa dạng giúp người chơi xây dựng cuộc sống riêng trong RexCity City.",
   },
 ];
 
@@ -279,7 +279,7 @@ function App() {
         <div className="overlay"></div>
 
         <header className="topbar">
-          <img src="/logo.png" alt="Sunrise Roleplay" className="logo" />
+          <img src="/logo.png" alt="RexCity" className="logo" />
 
           <nav className="main-nav">
             <a href="#home">Trang Chủ</a>
@@ -338,9 +338,11 @@ function App() {
       </section>
 
       <section className="news-section" id="news">
-        <video className="news-bg-video" autoPlay loop muted playsInline>
-          <source src="/tintuc.mp4" type="video/mp4" />
-        </video>
+        <img
+            className="news-bg-image"
+            src="/logo3.png"
+            alt=""
+          />
 
         <div className="news-overlay"></div>
 
@@ -421,7 +423,7 @@ function App() {
 
       <section className="bottom-sections">
         <video className="bottom-bg-video" autoPlay muted loop playsInline>
-          <source src="/tintuc.mp4" type="video/mp4" />
+          <source src="/tintuc1.mp4" type="video/mp4" />
         </video>
 
         <div className="bottom-bg-overlay"></div>
@@ -433,7 +435,7 @@ function App() {
               <h2>Đăng ký Streamer / Đối tác</h2>
               <p>
                 Dành cho creator muốn hợp tác cùng server, làm nội dung, tổ chức event
-                hoặc quảng bá cộng đồng Sunrise Roleplay.
+                hoặc quảng bá cộng đồng RexCity.
               </p>
             </div>
 
@@ -452,9 +454,9 @@ function App() {
           <div className="about-footer-inner">
             <div className="about-top">
               <div className="about-brand">
-                <img src="/logo.png" alt="Sunrise Roleplay" />
+                <img src="/logo.png" alt="RexCity" />
                 <div>
-                  <h2>SUNRISE ROLEPLAY</h2>
+                  <h2>RexCity</h2>
                   <p>Thành phố nhập vai đông người chơi nhất tại Việt Nam</p>
                 </div>
               </div>
@@ -462,7 +464,7 @@ function App() {
               <div className="about-content">
                 <h3>VỀ CHÚNG TÔI</h3>
                 <p>
-                  SUNRISE RP được hình thành từ niềm đam mê GTA V của một cộng đồng
+                  REXCITY được hình thành từ niềm đam mê GTA V của một cộng đồng
                   yêu thích nhập vai. Với mục tiêu tiên phong phát triển, chúng tôi
                   ngày càng hoàn thiện hệ thống, cập nhật nội dung mới và tạo ra một
                   thành phố sống động cho người chơi.
@@ -478,8 +480,8 @@ function App() {
             <div className="about-divider"></div>
 
             <div className="footer-center">
-              <h2>SUNRISE ROLEPLAY</h2>
-              <p>KẾT NỐI VỚI THÀNH PHỐ SUNRISE</p>
+              <h2>RexCity</h2>
+              <p>KẾT NỐI VỚI THÀNH PHỐ REXCITY</p>
 
               <div className="footer-buttons">
                 <a
@@ -501,7 +503,7 @@ function App() {
                 </a>
               </div>
 
-              <span>© 2026 SUNRISE ROLEPLAY. All rights reserved.</span>
+              <span>© 2026 REXCITY. All rights reserved.</span>
             </div>
           </div>
         </section>
@@ -620,7 +622,7 @@ function RankingPage({ onBack }) {
         {
           title: "Top 1 Cá Nhân",
           media: [
-            { src: "tintuc1.mp4" },
+            { src: "logo3.png" },
             { src: "chichech.mp4" },
             { youtubeId: "MwRHrrWlbHQ", poster: "/reward-gang-top1-3.jpg" },
           ],
@@ -643,12 +645,8 @@ function RankingPage({ onBack }) {
   const currentReward = rewardGroups[activeReward];
 
   return (
-    <main className="ranking-page">
-      <video className="ranking-bg-video" autoPlay muted loop playsInline>
-        <source src="/tintuc1.mp4" type="video/mp4" />
-      </video>
-
-      <div className="ranking-bg-overlay"></div>
+<main className="ranking-page">
+  <div className="ranking-bg-overlay"></div>
 
       <button className="back-btn" onClick={onBack}>
         ← Quay Lại Trang Chủ
